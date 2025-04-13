@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: wanderlust
+  labels:
+    app: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend-container
+          image: ritiksuteri/wanderlust-frontend:v5
+          ports:
+            - containerPort: 5173
+          env:
+            - name: VITE_API_PATH
+              value: "http://192.168.247.129:30500"
+
