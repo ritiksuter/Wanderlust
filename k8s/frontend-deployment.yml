@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: ritiksuteri/wanderlust-frontend:v11
+          image: ritiksuteri/wanderlust-frontend:v13
           ports:
             - containerPort: 5173
           env:

@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: ritiksuteri/wanderlust-backend:v7
+          image: ritiksuteri/wanderlust-backend:v9
           ports:
             - containerPort: 5000
           env:
